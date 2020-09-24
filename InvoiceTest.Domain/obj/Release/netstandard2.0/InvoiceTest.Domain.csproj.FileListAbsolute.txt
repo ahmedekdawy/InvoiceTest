@@ -1,0 +1,9 @@
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Domain\bin\Release\netstandard2.0\InvoiceTest.Domain.deps.json
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Domain\bin\Release\netstandard2.0\InvoiceTest.Domain.dll
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Domain\bin\Release\netstandard2.0\InvoiceTest.Domain.pdb
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Domain\obj\Release\netstandard2.0\InvoiceTest.Domain.csprojAssemblyReference.cache
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Domain\obj\Release\netstandard2.0\InvoiceTest.Domain.AssemblyInfoInputs.cache
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Domain\obj\Release\netstandard2.0\InvoiceTest.Domain.AssemblyInfo.cs
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Domain\obj\Release\netstandard2.0\InvoiceTest.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Domain\obj\Release\netstandard2.0\InvoiceTest.Domain.dll
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Domain\obj\Release\netstandard2.0\InvoiceTest.Domain.pdb

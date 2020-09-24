@@ -1,0 +1,10 @@
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Data.Tests\bin\Debug\netstandard2.0\InvoiceTest.Data.dll
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Data.Tests\bin\Debug\netstandard2.0\InvoiceTest.Domain.dll
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Data.Tests\bin\Debug\netstandard2.0\InvoiceTest.Data.pdb
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Data.Tests\bin\Debug\netstandard2.0\InvoiceTest.Domain.pdb
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Data.Tests\obj\Debug\netstandard2.0\InvoiceTest.Data.Tests.csprojAssemblyReference.cache
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Data.Tests\obj\Debug\netstandard2.0\InvoiceTest.Data.Tests.AssemblyInfoInputs.cache
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Data.Tests\obj\Debug\netstandard2.0\InvoiceTest.Data.Tests.AssemblyInfo.cs
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Data.Tests\obj\Debug\netstandard2.0\InvoiceTest.Data.Tests.csproj.CopyComplete
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Data.Tests\bin\Debug\netstandard2.0\InvoiceTest.Data.Tests.deps.json
+C:\Users\ahmed\source\repos\Invoice\InvoiceTest.Data.Tests\bin\Debug\netstandard2.0\InvoiceTest.Data.Tests.dll

@@ -1,0 +1,164 @@
+﻿@model InvoiceTest.Models.Invoice
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row">
+    <form method="post">
+        <div>
+            <div class="form-group row">
+                <div class="col-2">Invoice No</div>
+                <div class="col-4">
+                    @Html.TextBoxFor(m => m.InvoiceNo, new { @class = "form-control" })
+                </div>
+                <div class="col-2">Invoice Date</div>
+                <div class="col-4">   @Html.TextBoxFor(m => m.InvoiceNo, new { @type = "date", @class = "form-control datepicker" })</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">Store</div>
+                <div class="col-4">@Html.DropDownList("StoreId", ViewBag.StoresList as SelectList, "", new { @class = "form-control" })</div>
+
+            </div>
+        </div>
+        <table class="table table-bordered table-responsive invTable">
+            <thead>
+                <tr>
+
+                    <th>
+                        Item
+                    </th>
+                    <th>
+                        Unit
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Qty
+                    </th>
+                    <th>
+                        Total
+                    </th>
+                    <th>
+                        Discount
+                    </th>
+                    <th>
+                        Net
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (var i = 0; i < 1; i++)
+                {
+                    <tr>
+
+                        <td>
+                            <div class="form-group">
+                                @Html.DropDownList("Invoices[" + @i + "].ItemId", ViewBag.ItemsList as SelectList, "", new { @class = "form-control" })
+
+                            </div>
+                        </td>
+                        <td>
+
+                            @Html.DropDownList("Invoices[" + @i + "].UnitId", ViewBag.UnitsList as SelectList, "", new { @class = "form-control" })
+                        </td>
+                        <td>
+                            <input type="text" name="Invoices[@i].Price" id="Invoices[@i]_Price" class="form-control" />
+
+                        </td>
+                        <td>
+                            <input asp-for="QTY" name="Invoices[@i].QTY" id="Invoices[@i]_QTY" style="width:75px!important" class="form-control" />
+                        </td>
+                        <td>
+                            <input asp-for="Total" name="Invoices[@i].Total" id="Invoices[@i]_Total" style="width:75px!important" class="form-control" />
+                        </td>
+                        <td>
+                            <input asp-for="Discount" name="Invoices[@i].Discount" id="Invoices[@i]_Discount" style="width:75px!important" class="form-control" />
+                        </td>
+                        <td>
+                            <input asp-for="Net" name="Invoices[@i].Net" id="Invoices[@i]_Net" style="width:75px!important" class="form-control" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        <div dir="rtl" class="float-right row">
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="form-horizontal">  @Html.LabelFor(m => m.Total)</div>
+                    <div class="form-horizontal">  @Html.TextBoxFor(m => m.Total, new {  @class = "form-control" })</div>
+
+
+                </div>
+            </div>
+            <div class="col-md-8"><input class="btn btn-primary" type="button" value="Add" onclick="add();" /></div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="form-horizontal"> @Html.LabelFor(m => m.Taxes)</div>
+                    <div class="form-horizontal">   @Html.TextBoxFor(m => m.Taxes, new { @onchange = "CalculateNetInvoice()", @class = "form-control" })</div>
+
+
+                </div>
+            </div>
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="form-horizontal">@Html.LabelFor(m => m.Net)</div>
+                    <div class="form-horizontal"> @Html.TextBoxFor(m => m.Net, new { @class = "form-control" })</div>
+
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <input class="btn btn-primary" type="submit" value="Save" />
+                <a class="btn btn-primary"  asp-action="delete" asp-route-id="@Model.InvoiceNo">Delete</a>
+            </div>
+        </div>
+       
+        <script type="text/javascript">
+            function onchange() {
+                alert('x');
+            }
+            function add() {
+
+                $('.invTable').add()
+                var row = $('.invTable tbody>tr:last').clone(true);
+            
+                row.find(":input").attr("id", function () {
+                    var currId = $(this).attr("id");
+                    var newid = currId.replace(currId.substring(9, 10), $('.invTable tr').length-1);
+                    return newid;
+                });
+                     row.find(":input").attr("name", function () {
+                    var currId = $(this).attr("name");
+                    var newid = currId.replace(currId.substring(9, 10), $('.invTable tr').length-1);
+                    return newid;
+                });
+                //row.find('#ddlDocumentDescription_' + oldId).attr('id', 'ddlDocumentDescription_' + id);
+                //row.find('#ddlFileType_' + oldId).attr('id', 'ddlFileType_' + id);
+                //row.find('#txtReferenceNo_' + oldId).attr('id', 'txtReferenceNo_' + id);
+                //row.find('#fileDocument_' + oldId).attr('id', 'fileDocument_' + id);
+
+                //row.table.find("input:text").val("");
+                row.insertAfter('.invTable tbody>tr:last');
+
+            }
+            function onchange() {
+            }
+        </script>
+    </form>
+
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+
+}
